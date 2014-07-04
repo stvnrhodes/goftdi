@@ -1,1 +1,1 @@
-goftdi wraps libftdi in a library
+[![GoDoc](https://godoc.org/github.com/stvnrhodes/goftdi?status.png)](https://godoc.org/github.com/stvnrhodes/goftdi)
