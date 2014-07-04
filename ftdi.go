@@ -1,3 +1,4 @@
+// Package ftdi is a wrapper around libFTDI.
 package ftdi
 
 import (
@@ -12,14 +13,14 @@ import (
 */
 import "C"
 
-// Version represents a version of libftdi.
+// Version represents a version of libFTDI.
 type Version struct {
 	Major, Minor, Micro int
 	Version             string // Version as (static) string
 	Snapshot            string //Git snapshot version if known. Otherwise "unknown" or empty string.
 }
 
-// GetVersion gets the current libftdi version.
+// GetVersion gets the current libFTDI version.
 func GetVersion() Version {
 	info := C.ftdi_get_library_version()
 	return Version{
