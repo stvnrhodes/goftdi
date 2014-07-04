@@ -38,9 +38,9 @@ func getError(ctx *C.struct_ftdi_context) string {
 
 // Config holds the vendor and product ids for the usb device.
 type Config struct {
-	// Vendor and Product are IDs uniquely assigned to each USB manufacturer
+	// Vendor and Product are IDs uniquely assigned to each USB manufacturer.
 	Vendor, Product int
-	// Baud specifies the baud rate for the serial connection
+	// Baud specifies the baud rate for the serial connection.
 	Baud int
 }
 
@@ -48,7 +48,7 @@ type conn struct {
 	ctx *C.struct_ftdi_context
 }
 
-// Open returns a serial connection that can be read or written
+// Open returns a serial connection that can be read or written.
 func Open(c Config) (io.ReadWriteCloser, error) {
 	ctx := C.ftdi_new()
 	if ctx == nil {
